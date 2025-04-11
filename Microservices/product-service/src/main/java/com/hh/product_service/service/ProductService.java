@@ -39,4 +39,8 @@ public class ProductService {
                         product.getPrice()))
                 .toList();
     }
+
+    public void deleteProductById(int id){
+        productRepository.deleteProductById(id);
+    }
 }
