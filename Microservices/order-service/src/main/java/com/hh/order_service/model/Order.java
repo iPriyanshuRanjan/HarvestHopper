@@ -1,7 +1,6 @@
 package com.hh.order_service.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,11 +15,12 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class Order {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String orderNumber;
     private String skuCode;
     private String productName;
-    private int quantity;
+    private Integer quantity;
     private BigDecimal price;
-
 }
