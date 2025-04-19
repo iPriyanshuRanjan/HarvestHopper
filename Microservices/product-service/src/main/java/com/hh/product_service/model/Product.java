@@ -16,7 +16,7 @@ public class Product {
     private String id;
     private String name;
     private String imageUrl;
-    private int skuCode;
+    private String skuCode;
     private String description;
     private BigDecimal price;
 }

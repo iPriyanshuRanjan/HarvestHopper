@@ -19,6 +19,9 @@ target/
 *.iml
 *.ipr
 
+# Ignore MySQL data directory
+Microservices/inventory-service/mysql/
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
