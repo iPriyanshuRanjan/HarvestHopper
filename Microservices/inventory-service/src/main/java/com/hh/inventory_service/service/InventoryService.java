@@ -1,6 +1,9 @@
 package com.hh.inventory_service.service;
 
 import com.hh.inventory_service.dto.InventoryWithProductResponse;
+import com.hh.inventory_service.entity.Inventory;
+
+import java.util.List;
 
 public interface InventoryService {
 
@@ -18,4 +21,5 @@ public interface InventoryService {
     //Update existing Stock by SKUCode
     void updateStockBySKUCode(String skuCode, Integer quantity);
 
+    List<Inventory> getAllInventories();
 }

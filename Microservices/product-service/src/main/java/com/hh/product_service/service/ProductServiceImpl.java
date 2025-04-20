@@ -31,6 +31,7 @@ public class ProductServiceImpl implements ProductService {
         return new ProductResponse(String .valueOf(product.getId()),
                 product.getName(),
                 product.getDescription(),
+                product.getSkuCode(),
                 product.getPrice());
     }
 
@@ -40,6 +41,7 @@ public class ProductServiceImpl implements ProductService {
                 .map(product -> new ProductResponse(
                         product.getId(),
                         product.getName(),
+                        product.getSkuCode(),
                         product.getDescription(),
                         product.getPrice()))
                 .toList();
@@ -53,6 +55,7 @@ public class ProductServiceImpl implements ProductService {
         return new ProductResponse(
                 product.getId(),
                 product.getName(),
+                product.getSkuCode(),
                 product.getDescription(),
                 product.getPrice());
     }
@@ -75,6 +78,7 @@ public class ProductServiceImpl implements ProductService {
         return new ProductResponse(
                 product.getId(),
                 product.getName(),
+                product.getSkuCode(),
                 product.getDescription(),
                 product.getPrice());
     }
@@ -93,6 +97,7 @@ public class ProductServiceImpl implements ProductService {
         return new ProductResponse(
                 product.getId(),
                 product.getName(),
+                product.getSkuCode(),
                 product.getDescription(),
                 product.getPrice());
     }

@@ -1,10 +1,13 @@
 package com.hh.inventory_service.controller;
 
 import com.hh.inventory_service.dto.InventoryWithProductResponse;
+import com.hh.inventory_service.entity.Inventory;
 import com.hh.inventory_service.service.serviceImpl.InventoryServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/inventory")
@@ -49,5 +52,12 @@ public class InventoryController {
         // Update stock for a given SKU code and quantity
         inventoryServiceImpl.updateStockBySKUCode(skuCode, quantity);
         return "Stock updated successfully for SKU code: " + skuCode + " with quantity: " + quantity;
+    }
+
+    @GetMapping("/getAll")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Inventory> getAllInventories() {
+        // Get all inventories
+        return inventoryServiceImpl.getAllInventories();
     }
 }

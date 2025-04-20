@@ -10,6 +10,8 @@ import com.hh.inventory_service.service.InventoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
     public class InventoryServiceImpl implements InventoryService {
@@ -81,6 +83,13 @@ import org.springframework.stereotype.Service;
         // Update the quantity
         inventory.setQuantity(quantity);
         inventoryRepository.save(inventory);
+    }
+
+    @Override
+    public List<Inventory> getAllInventories() {
+        // Get all inventories from the repository
+        return inventoryRepository.findAll();
+
     }
 
 
